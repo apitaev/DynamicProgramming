@@ -2,7 +2,7 @@ package com.pitaev.leetcode.dp;
 
 /**
  * This class implements a solution for a leetcode problem <code>63</code>:
- * https://leetcode.com/problems/unique-paths-ii/
+ * <a href="https://leetcode.com/problems/unique-paths-ii/">Unique Path II </a>
  * <p>Time complexity: O(n*m) - number of subproblems to solve
  * <p>Space complexity: O(n*m)
  */

@@ -2,9 +2,9 @@ package com.pitaev.leetcode.dp;
 
 /**
  * This class implements a solution for a leetcode problem <code>63</code>:
- * https://leetcode.com/problems/unique-paths-ii/
+ * <a href="https://leetcode.com/problems/unique-paths-ii/">Unique Paths II</a>
  * <p>The table has two rows only</p>
- * <p>Time complexity: O(n) - number of subproblems to solve
+ * <p>Time complexity: O(n) - number of problems to solve
  * <p>Space complexity: O(n*m)
  */
 public class UniquePathsWithObstaclesUsingTwoRowTable {
