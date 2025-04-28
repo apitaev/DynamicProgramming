@@ -1,4 +1,4 @@
-package com.pitaev.leetcode.dp;
+package com.pitaev.leetcode.dp.counting;
 
 import java.util.List;
 

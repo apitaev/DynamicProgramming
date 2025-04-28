@@ -1,4 +1,4 @@
-package com.pitaev.leetcode.dp;
+package com.pitaev.leetcode.dp.counting;
 
 /**
  * This class implements a solution for a leetcode problem <code>790</code>:
