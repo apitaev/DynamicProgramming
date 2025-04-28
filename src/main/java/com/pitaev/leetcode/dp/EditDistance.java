@@ -33,7 +33,7 @@ import  static java.lang.Math.min;
                 table[i][j] = Math.min(table[i][j - 1] + 1, Math.min(
                         // deletion (go down)
                         table[i - 1][j] + 1,
-                        // diagonaly
+                        // diagonally
                         table[i - 1][j - 1] + getDistance(word1, word2, i - 1, j - 1)));
             }
         }
