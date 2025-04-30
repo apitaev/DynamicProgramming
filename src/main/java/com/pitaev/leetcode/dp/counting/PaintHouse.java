@@ -3,7 +3,7 @@ package com.pitaev.leetcode.dp.counting;
 import static java.lang.Math.min;
 /**
  * This class implements a solution for a leetcode problem <code>256</code>:
- * <a href="https://leetcode.com/problems/paint-house/">Word Break</a>
+ * <a href="https://leetcode.com/problems/paint-house/">Paint House</a>
  * <p>Time complexity: O(n)
  * <p>Space complexity: O(n), the space can be optimized to O(1), we only use previous column
  */
