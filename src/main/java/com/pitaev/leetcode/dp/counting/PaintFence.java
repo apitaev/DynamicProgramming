@@ -1,4 +1,4 @@
-package com.pitaev.leetcode.dp.optimization;
+package com.pitaev.leetcode.dp.counting;
 
 
 /**
@@ -30,7 +30,6 @@ public class PaintFence {
             different[i] = (k - 1) * total[i - 1];
             total[i] = same[i] + different[i];
         }
-
         return total[n - 1];
 
     }
