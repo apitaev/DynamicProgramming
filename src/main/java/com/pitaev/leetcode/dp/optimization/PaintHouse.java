@@ -1,4 +1,4 @@
-package com.pitaev.leetcode.dp.counting;
+package com.pitaev.leetcode.dp.optimization;
 
 import static java.lang.Math.min;
 /**
