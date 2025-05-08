@@ -22,17 +22,14 @@ public class LongestCommonSubsequence {
         // 2. Convert text1 to the empth string by deletion, table first column will be 0 by default
         for (int i = 1; i <= text1.length(); i++) {
             for (int j = 1; j <= text2.length(); j++) {
-                table[i][j] = Math.max(table[i - 1][j], Math.max(table[i][j - 1], table[i - 1][j - 1] + getReward(text1, text2, i - 1, j - 1)));
+                // calculate reward for match
+                int s = 0;
+                if (text1.charAt(i - 1) == text2.charAt(j - 1)) s++;
+                table[i][j] = Math.max(table[i - 1][j], Math.max(table[i][j - 1], table[i - 1][j - 1] + s));
             }
         }
 
         // return the most bottom right element in the table
         return table[text1.length()][text2.length()];
-    }
-
-    public static int getReward(String s1, String s2, int row, int column) {
-        // return 1 if match
-        if (row < s1.length() && column < s2.length() && s1.charAt(row) == s2.charAt(column)) return 1;
-        return 0;
     }
 }
