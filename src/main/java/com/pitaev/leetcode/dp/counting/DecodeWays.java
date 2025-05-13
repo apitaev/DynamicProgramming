@@ -41,4 +41,3 @@ public class DecodeWays {
         return table[s.length() % 3];
     }
 }
-}
