@@ -3,6 +3,7 @@ package com.pitaev.leetcode.dp.optimization;
 /**
  * This class implements a solution for a leetcode problem <code>312</code>:
  * <a href="https://leetcode.com/problems/burst-balloons/description//>Burst balloons</a>
+ * This solution uses matrix multiplication approach
  * <p>Time complexity: O(n^3)
  * <p>Space complexity: O(n^2)
  */
