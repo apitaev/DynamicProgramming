@@ -6,8 +6,8 @@ import java.util.List;
 /**
  * This class implements a solution for a leetcode problem <code>2414</code>:
  * <a href="leetcode.com/problems/different-ways-to-add-parentheses/">Different Ways to Add Parentheses</a>
- * Time complexity:
- * Space complexity:
+ * Time complexity: nth catlan number (exponential in n)
+ * Space complexity: nth catlan number (exponential in n)
  */
 public class DifferentWaysToAddParentheses {
     public List<Integer> diffWaysToCompute(String expression) {
