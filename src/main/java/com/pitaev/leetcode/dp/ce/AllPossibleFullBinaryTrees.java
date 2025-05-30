@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * This class implements a solution for a leetcode problem <code>894</code>:
  * <a href="https://leetcode.com/problems/all-possible-full-binary-trees/">All Possible Full Binary Trees</a>
- * Time complexity:
+ * Time complexity: Exp
  * Number of full binary tree must be odd - e.g. 2n + 1
  * f(n) = Sum f(i) * f(n - i) for i = 1..2n - 1
  * Space complexity:
