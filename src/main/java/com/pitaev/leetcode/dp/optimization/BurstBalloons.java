@@ -16,8 +16,8 @@ public class BurstBalloons {
             full[i] = nums[i - 1];
         }
         full[i] = 1;
-        // split array in two subarrays
-        // i..k and k..j
+        // split array in two sub-arrays (can be seen as two subtrees) i..k and k..j
+        // so that balloon k is going to be burst
         // calculate f(i,k)
         // calculate f(k,j)
         // f(i,j) = max(f(i,j), f(i,k) + f(k, j) + full[i]* f[k]*f[j])
