@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class AllPossibleFullBinaryTrees {
     /**
-     * Definition for a binary tree node.
+     * Bean-Definition for a binary tree node.
      */
      public class TreeNode {
        int val;
