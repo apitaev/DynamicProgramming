@@ -8,8 +8,7 @@ jobs:
     steps:
       - name: make a post request to review bot api
         run: |
-          API_URL="curl https://pitaeva-deploy-code-review-bot.hf.space/health" # Replace with your API endpoint
-          curl https://pitaeva-deploy-code-review-bot.hf.space/health
-          #RESPONSE=$(curl -s "$API_URL")
+          API_URL="https://pitaeva-deploy-code-review-bot.hf.space/health" # Replace with your API endpoint
+          RESPONSE=$(curl -s "$API_URL")
           echo "API Response:"
-          #echo "$RESPONSE"
+          echo "$RESPONSE"
