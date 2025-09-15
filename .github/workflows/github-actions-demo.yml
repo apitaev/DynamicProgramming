@@ -9,9 +9,13 @@ jobs:
       - name: Get PR changed files
         run: |
           PR_NUMBER=${{ github.event.pull_request.number }}
+          echo "$PR_NUMBER"
           OWNER=${{ github.repository_owner }}
+          echo "$OWNER"
           REPO=${{ github.event.repository.name }}
+          echo "$REPO"
           API_URL="https://api.github.com/repos/${OWNER}/${REPO}/pulls/${PR_NUMBER}/files"
+          echo "$API_URL"
           # Fetch the list of changed files using the GitHub API
           # The 'jq' command is used to parse the JSON response
            CHANGED_FILES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${API_URL}" | jq -r '.[] | .filename + " " + .status + " " + .patch')
