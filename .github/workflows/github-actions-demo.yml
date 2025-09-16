@@ -25,7 +25,7 @@ jobs:
       - name: make a post request to review bot review comments api
         run: |
           API_URL="https://pitaeva-deploy-code-review-bot.hf.space/reviewcomments" # Replace with your API endpoint
-          echo ${env.JSON_PAYLOAD}
+          echo ${{ env.JSON_PAYLOAD }}
           REQUEST_BODY="{ changes: ${{ env.JSON_PAYLOAD }} }"
           echo "Request body:"
           echo "$REQUEST_BODY"
