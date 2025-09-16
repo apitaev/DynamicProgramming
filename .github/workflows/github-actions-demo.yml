@@ -22,11 +22,11 @@ jobs:
            JSON_PAYLOAD=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${API_URL}")
            echo "JSON payload:"
            echo "JSON_PAYLOAD=test" >> $GITHUB_ENV
-           echo ${env.JSON_PAYLOAD}
            #echo "::set-output name=changed_files::${CHANGED_FILES}"
       - name: make a post request to review bot review comments api
         run: |
           API_URL="https://pitaeva-deploy-code-review-bot.hf.space/reviewcomments" # Replace with your API endpoint
+          echo ${env.JSON_PAYLOAD}
           REQUEST_BODY="{ changes: ${{ env.JSON_PAYLOAD }} }"
           echo "Request body:"
           echo "$REQUEST_BODY"
