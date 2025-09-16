@@ -1,1 +1,1 @@
-# DynamicProgrammingx
+# DynamicProgramming
