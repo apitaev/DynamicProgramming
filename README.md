@@ -1,1 +1,1 @@
-# DynamicProgrammingqe
+# DynamicProgramming
