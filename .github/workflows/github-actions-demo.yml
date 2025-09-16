@@ -22,7 +22,7 @@ jobs:
           JSON_PAYLOAD=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${API_URL}")
            #echo "::set-output name=changed_files::${CHANGED_FILES}"
           API_URL="https://pitaeva-deploy-code-review-bot.hf.space/reviewcomments" # Replace with your API endpoint
-          REQUEST_BODY="{ "changes": $JSON_PAYLOAD }"
+          REQUEST_BODY="{ \"changes\": $JSON_PAYLOAD }"
           echo "Request body:"
           echo "$REQUEST_BODY"
           RESPONSE=$(curl -X POST -H "Content-Type: application/json" -d '{ "changes": $JSON_PAYLOAD }' "${API_URL}")
