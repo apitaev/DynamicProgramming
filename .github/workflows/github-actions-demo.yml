@@ -14,6 +14,7 @@ jobs:
           echo "$OWNER"
           REPO=${{ github.event.repository.name }}
           echo "$REPO"
+          echo "The head SHA of the pull request is: ${{ github.event.pull_request.head.sha }}"
           API_URL="https://api.github.com/repos/${OWNER}/${REPO}/pulls/${PR_NUMBER}/files"
           echo "$API_URL"
           # Fetch the list of changed files using the GitHub API
