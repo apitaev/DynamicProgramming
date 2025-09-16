@@ -25,7 +25,7 @@ jobs:
           REQUEST_BODY="{ \"changes\": $JSON_PAYLOAD }"
           echo "Request body:"
           echo "$REQUEST_BODY"
-          RESPONSE=$(curl -X POST -H "Content-Type: application/json" -d '{ "changes": $REQUEST_BODY }' "${API_URL}")
+          RESPONSE=$(curl -X POST -H "Content-Type: application/json" -d "${REQUEST_BODY} "${API_URL}")
           echo "API Response:"
           echo "$RESPONSE"
           
