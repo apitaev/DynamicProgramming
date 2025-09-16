@@ -22,7 +22,7 @@ jobs:
            JSON_PAYLOAD=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${API_URL}")
            echo "JSON payload:"
            echo "JSON_PAYLOAD=$JSON_PAYLOAD" >> $GITHUB_ENV
-           echo ${{env.JSON_PAYLOAD}}
+           echo ${env.JSON_PAYLOAD}
            #echo "::set-output name=changed_files::${CHANGED_FILES}"
       - name: make a post request to review bot review comments api
         run: |
