@@ -20,7 +20,7 @@ jobs:
           # The 'jq' command is used to parse the JSON response
            #CHANGED_FILES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${API_URL}" | jq -r '.[] | .filename + " " + .status + " " + .patch')
            JSON_PAYLOAD=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${API_URL}")
-           echo "JSON_PAYLOAD='$JSON_PAYLOAD"' >> $GITHUB_ENV
+           echo "JSON_PAYLOAD='$JSON_PAYLOAD'" >> $GITHUB_ENV
            #echo "::set-output name=changed_files::${CHANGED_FILES}"
       - name: make a post request to review bot review comments api
         run: |
