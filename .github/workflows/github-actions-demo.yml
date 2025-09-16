@@ -18,14 +18,14 @@ jobs:
           echo "$API_URL"
           # Fetch the list of changed files using the GitHub API
           # The 'jq' command is used to parse the JSON response
-           CHANGED_FILES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${API_URL}" | jq -r '.[] | .filename + " " + .status + " " + .patch')
+           #CHANGED_FILES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${API_URL}" | jq -r '.[] | .filename + " " + .status + " " + .patch')
            JSON_PAYLOAD=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${API_URL}")
            echo "$JSON_PAYLOAD"
-           echo "::set-output name=changed_files::${CHANGED_FILES}"
-      - name: make a post request to review bot api
+           #echo "::set-output name=changed_files::${CHANGED_FILES}"
+      - name: make a post request to review bot review comments api
         run: |
-          API_URL="https://pitaeva-deploy-code-review-bot.hf.space/health" # Replace with your API endpoint
-          RESPONSE=$(curl -s "$API_URL")
+          API_URL="https://pitaeva-deploy-code-review-bot.hf.space/reviewcomments" # Replace with your API endpoint
+          RESPONSE=$(curl -X POST -H "Content-Type: application/json" -d '{ "changes": $JSONPAYLOAD }' "${API_URL}")
           echo "API Response:"
           echo "$RESPONSE"
           
