@@ -9,6 +9,7 @@ package com.pitaev.leetcode.dp.optimization;
  */
 public class BurstBalloons {
     public int maxCoins(int[] nums) {
+         // TODO: improve comments
         //update nums array to add 1's
         int[] full = new int[nums.length + 2];
         full[0] = 1;
