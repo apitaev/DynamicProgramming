@@ -11,7 +11,7 @@ public class BurstBalloons {
     public int maxCoins(int[] nums) {
          // TODO: improve comments
         //update nums array to add 1's
-        int[] full = new int[nums.length + 2];
+        double[] full = new double[nums.length + 2];
         full[0] = 1;
         int i;
         for (i = 1; i <= nums.length; i++) {
