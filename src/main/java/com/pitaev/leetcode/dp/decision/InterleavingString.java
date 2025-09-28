@@ -14,8 +14,8 @@ public class InterleavingString {
         table[0][0] = true;
         // base cases:
         // build interleave using s2 only
-        for (int i = 1; i <= s2.length(); i++) {
-            table[0][i] = table[0][i - 1] && (s2.charAt(i - 1) == s3.charAt(i - 1));
+        for (int i = 1; i <= s2.length; i++) {
+            table[0][k] = table[0][k - 1] && (s2.charAt(k - 1) == s3.charAt(i - 1));
         }
         // build interleave using s1 only
         for (int i = 1; i <= s1.length(); i++) {
